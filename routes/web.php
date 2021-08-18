@@ -13,6 +13,15 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+
 
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form');
 
@@ -33,3 +42,7 @@ Route::post('/contact/all/{id}/update',
 Route::get('/contact/all/{id}/delete',
 'ContactController@deleteMessage')
 ->name('contact-delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

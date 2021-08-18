@@ -250,9 +250,8 @@ td {
   padding-bottom: 2.3em;
 }
 
-.form-control {
+.footer .form-control {
   border-radius: 50px;
-  opacity: 0.5;
 }
 
 /*=========================
